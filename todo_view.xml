@@ -4,7 +4,34 @@
     <data>
         <menuitem name='My Tasks App' id='task_id'/>
         <menuitem name='Task Menu' id='task_sub_id' parent='task_id'/>
-
+        <!-- Form view to create Form -->
+        <record id='todo_form' model='ir.ui.view'>
+            <field name='name'>todo.form</field>
+            <field name='model'>todo.task</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+            <form string='stu idea'>
+                <group>
+                    <field name='name'/>
+                    <field name='is_done'/>
+                    <field name='active'/>
+                </group>
+            </form>
+            </field>
+        </record>
+        <!-- Tree view to create lables -->
+        <record id='task_tree' model='ir.ui.view'>
+            <field name='name'>todo.tree</field>
+            <field name='model'>todo.task</field>
+            <field name='type'>tree</field>
+            <field name='arch' type='xml'>
+            <tree string='stu idea'>
+                <field name='name'/>
+                <field name='is_done'/>
+                <field name='active'/>
+            </tree>
+            </field>
+        </record>
 
         <record id='task_action' model='ir.actions.act_window'>
             <field name='name'>Todo Tasks</field>

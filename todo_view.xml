@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<openerp>
+    <data>
+        <menuitem name='My Tasks App' id='task_id'/>
+        <menuitem name='Task Menu' id='task_sub_id' parent='task_id'/>
+
+
+        <record id='task_action' model='ir.actions.act_window'>
+            <field name='name'>Todo Tasks</field>
+            <field name='res_model'>todo.task</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem name='Tasks' id='task_sub_menu' parent='task_sub_id' action='task_action'/>
+
+    </data>
+</openerp>
